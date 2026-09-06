@@ -58,7 +58,7 @@ export default function Hero() {
     <section className="relative flex min-h-screen h-[100svh] justify-center overflow-hidden bg-[#E2231A] text-white">
       <div
         className="absolute z-20 left-1/2 -translate-x-1/2 flex flex-col items-center w-full px-4
-                      max-w-[95%] sm:max-w-[85%] md:max-w-[70%] lg:max-w-[60%]"
+                      max-w-[95%] sm:max-w-[85%] md:max-w-[90%] lg:max-w-[80%]"
         style={{
           bottom:
             device === "mobile"
@@ -75,8 +75,10 @@ export default function Hero() {
         }}
       >
         <h1
-          className="font-[MPlusRounded1c] font-extrabold tracking-[-0.05em]
-                       text-[4rem] sm:text-[5.8rem] md:text-[5rem] lg:text-[6rem] leading-[1.05]"
+          className="font-[MPlusRounded1c] font-extrabold tracking-[-0.05em] leading-[1.05]
+                       text-[clamp(2.75rem,15vw,4rem)]
+                       sm:text-[clamp(3.25rem,13.5vw,5.8rem)]
+                       md:whitespace-nowrap md:text-[clamp(2.75rem,7.2vw,6rem)]"
         >
           EVENAFTER MUMBAI
         </h1>
