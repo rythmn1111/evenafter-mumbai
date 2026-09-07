@@ -49,7 +49,17 @@ export default function StructuredData() {
         isAccessibleForFree: false,
         inLanguage: "en-IN",
         organizer: { "@id": `${SITE_URL}/#organization` },
-        performer: { "@id": `${SITE_URL}/#organization` },
+        // Google recommends `offers` on every Event. Registrations are closed,
+        // so this advertises the event as sold out rather than inventing a price.
+        // `performer` is deliberately omitted: Google expects a Person or
+        // PerformingGroup there, which doesn't describe a conference.
+        offers: {
+          "@type": "Offer",
+          url: SITE_URL,
+          availability: "https://schema.org/SoldOut",
+          validFrom: "2026-01-01T00:00:00+05:30",
+          category: "Registration",
+        },
         location: {
           "@type": "Place",
           name: "Yashwantrao Chavan Centre",
