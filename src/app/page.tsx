@@ -9,15 +9,25 @@ import Team from "@/components/Team";
 import Volunteers from "@/components/Volunteers";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import StructuredData from "@/components/StructuredData";
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
+
+      {/* Crawlable context for the hero, which is otherwise mostly imagery.
+          No <h1> here — the hero owns the single h1 on the page. */}
       <section className="sr-only">
-        <h1>EVENAFTER MUMBAI 2026</h1>
+        <h2>EVENAFTER MUMBAI 2026 — Conference &amp; Hackathon</h2>
         <p>
-          EVENAFTER MUMBAI is an Ethereum-focused conference &amp; hackathon happening
-          in Mumbai from 8–9 September 2026.
+          EVENAFTER (also known as EVENAFTER MUMBAI) is an Ethereum-focused
+          conference and mini hackathon taking place in Mumbai, India on 8–9
+          September 2026. The EVENAFTER conference runs at Yashwantrao Chavan
+          Centre, Nariman Point, with talks, panels, sponsor activations and open
+          networking, followed by the EVENAFTER hackathon across three tracks:
+          DeFi, Privacy and AI. EVENAFTER events bring together builders,
+          speakers, judges and mentors from across the Ethereum ecosystem.
         </p>
       </section>
 

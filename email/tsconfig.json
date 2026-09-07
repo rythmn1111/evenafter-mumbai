@@ -1,0 +1,13 @@
+{
+  "//": "email/ is a standalone Bun program, not part of the Next app. Check it with: bunx tsc -p email",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["bun"],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": ["*.ts"]
+}
